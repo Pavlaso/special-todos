@@ -1,6 +1,4 @@
 import {ChangeEvent, FC, useState} from "react";
-import '../style/App.css';
-
 
 export const AddItemForm: FC<AddItemFormProps> = ({addTask}) => {
 

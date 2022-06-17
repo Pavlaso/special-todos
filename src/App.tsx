@@ -1,8 +1,6 @@
 import { useState} from 'react';
 import {v1} from "uuid";
 
-import './style/App.css';
-
 import { AddItemForm } from "./components/AddItemForm";
 import { Buttons } from './components/Buttons';
 import { Tasks } from './components/Tasks';
