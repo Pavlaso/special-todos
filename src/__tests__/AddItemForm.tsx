@@ -15,12 +15,11 @@ describe('AddItemForm', () => {
         expect(screen.getByRole<HTMLButtonElement>('button')).toBeInTheDocument()
     })
     it('changed works', () => {
-        expect(screen.getByRole<HTMLInputElement>('textbox').value).toBe('')
+        expect(screen.getByRole<HTMLInputElement>('textbox')).toContainHTML('')
 
         userEvent.type(screen.getByRole<HTMLInputElement>('textbox'), 'eat')
 
-        expect(screen.getByRole<HTMLInputElement>('textbox').value).toBe('eat')
-
+        expect(screen.getByRole<HTMLInputElement>('textbox')).toContainHTML('eat')
     })
     it('onClickAddHandler works', () => {
         userEvent.type(screen.getByRole<HTMLInputElement>('textbox'), 'eat')

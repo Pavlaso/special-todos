@@ -1,57 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Task Edit ClassNames Task snapshot 1`] = `
+exports[`Tasks Tasks snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="task"
-        data-testid="task-component"
-      >
-        <label
-          class="label"
-        >
-          <input
-            class="checkbox"
-            type="checkbox"
-          />
-          <span
-            class="fake"
-          />
-          <span
-            class="text"
-            data-testid="task-text"
-          >
-            renderred
-          </span>
-        </label>
-      </div>
+        class="list"
+      />
     </div>
   </body>,
   "container": <div>
     <div
-      class="task"
-      data-testid="task-component"
-    >
-      <label
-        class="label"
-      >
-        <input
-          class="checkbox"
-          type="checkbox"
-        />
-        <span
-          class="fake"
-        />
-        <span
-          class="text"
-          data-testid="task-text"
-        >
-          renderred
-        </span>
-      </label>
-    </div>
+      class="list"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
