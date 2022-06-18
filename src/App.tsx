@@ -5,20 +5,15 @@ import { AddItemForm } from "./components/AddItemForm";
 import { Buttons } from './components/Buttons';
 import { Tasks } from './components/Tasks';
 
-//Тут нет тестирования, так как я не умею писать тесты :), но я готов учится
-
 export const App = () => {
 
     const [tasks, setTasks] = useState<taskType[]>([])
     const [number, setNumber] = useState(0)
     const [filter, setFilter] = useState('all')
 
+    const deleteTaskHandler = () =>  setTasks([...tasks.filter((t: taskType) => !t.isDone)])
 
-    const deleteTaskHandler= () =>  setTasks([...tasks.filter((t: taskType) => !t.isDone)])
-
-    const changeFilter =(filter: string) => setFilter(filter)
-
-    const addTask=(title: string) => {
+    const addTask = (title: string) => {
         if(title) {
             setTasks([...tasks, { 
                 id: v1(), title, isDone: false 
@@ -43,7 +38,7 @@ export const App = () => {
 
             <Tasks tasks={tasks} changeStatusTask={changeStatusTask} filter={filter} />
             
-            <Buttons deleteTaskHandler={deleteTaskHandler} changeFilter={changeFilter} filter={filter}  number={number}/>
+            <Buttons deleteTaskHandler={deleteTaskHandler} setFilter={setFilter} filter={filter}  number={number}/>
         </div>
   );
 }

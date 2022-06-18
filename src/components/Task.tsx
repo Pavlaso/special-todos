@@ -17,7 +17,7 @@ export const Task: FC<changedTaskType> = ({task, changeStatusTask}) =>{
             <label className="label">
                 <input className="checkbox" onChange={onStatusHandler} checked={task.isDone} type="checkbox" />
                 <span className="fake"/>
-                <span className={cssDone}>{task.title}</span>
+                <span data-testid="task-text" className={cssDone}>{task.title}</span>
             </label>
         </div>)
 

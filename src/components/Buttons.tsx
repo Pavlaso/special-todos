@@ -1,10 +1,12 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
+import { toUpperCaseFirsrLetter } from "../helpers/functions"
 
-export const Buttons: FC<ButtonsType> = ({ deleteTaskHandler, changeFilter,  filter, number }) => {
-  
+
+export const Buttons: FC<ButtonsType> = ({ deleteTaskHandler, setFilter,  filter, number }) => {
+
+    const changeFilter =(filter: string) => setFilter(filter)
+
     const buttons = ['all', 'active', 'completed']
-
-    const toUpperCaseFirsrLetter = (item: string) => item[0].toUpperCase() + item.slice(1)
 
     return <div className="menu">
     <div className="sum">{number} items left</div>
@@ -25,7 +27,7 @@ export const Buttons: FC<ButtonsType> = ({ deleteTaskHandler, changeFilter,  fil
 
 type ButtonsType = {
     deleteTaskHandler: () => void 
-    changeFilter: (item: string) => void
+    setFilter: (item: string) => void
     filter: string
     number: number
 }
